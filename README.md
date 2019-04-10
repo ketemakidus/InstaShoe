@@ -1,5 +1,5 @@
-#InstaShoe 
+InstaShoe 
 
-#A Full-Stack React App made to help people trade their used shoes with others or donate them!
+##A Full-Stack React App made to help people trade their used shoes with others or donate them!
 
-#Technologies Used: HTML5, CSS3, React.js, and Mongoose
+##Technologies Used: HTML5, CSS3, React.js, and Mongoose
