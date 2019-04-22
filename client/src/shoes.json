@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "name": "NBA Sneakers ",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTF3i-OptGdiztmdDcl1Ddbra793JtHwhdMKZDXJUIxa-j2mYR1",
+    "Size": 11 ,
+    "Condition": "Good"
+  },
+  {
+    "id": 2,
+    "name": "Sneakers",
+    "image": "https://scontent-lga3-1.cdninstagram.com/vp/b63c5632f5f4b2d5da9adf05642cbc77/5D5933CA/t51.2885-15/e35/56591108_128355228275707_9104950454330775497_n.jpg?_nc_ht=scontent-lga3-1.cdninstagram.com",
+    "Size": 10 ,
+    "Condition": "New"
+  }
+  
+]

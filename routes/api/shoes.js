@@ -1,16 +1,21 @@
 const router = require("express").Router();
-const booksController = require("../../controllers/booksController");
+const shoesController = require("../../controllers/shoesController");
 
-// Matches with "/api/books"
+// Matches with "/api/shoes"
 router.route("/")
-  .get(booksController.findAll)
-  .post(booksController.create);
+  .get(shoesController.findAll)
+  .post(shoesController.create);
 
-// Matches with "/api/books/:id"
+// Matches with "/api/shoes/:id"
 router
-  .route("/:id")
-  .get(booksController.findById)
-  .put(booksController.update)
-  .delete(booksController.remove);
+  .route("/shoes")
+  .get(shoesController.findById)
+  .put(shoesController.update)
+  .delete(shoesController.remove);
+
+  router.route("/api/shoes")
+  .get(shoesController.findAll)
 
 module.exports = router;
+
+
