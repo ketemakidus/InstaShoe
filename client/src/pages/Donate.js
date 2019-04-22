@@ -36,7 +36,7 @@ handleFormSubmit = event => {
 
 render(){
   return (
-    <Container fluid>
+    <Container>
       <Row>
         <Col size="md-12">
           <Jumbotron>

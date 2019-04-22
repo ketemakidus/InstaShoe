@@ -1,4 +1,26 @@
-h1{
-    font-size: 5.5rem;
+.jumbotron {
+    height: 400px;
+    background-image: url("../assets/gettyimages-462668523-1024x1024.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: top;
+    background-color: #000;
+    padding: 60px 0 0;
     text-align: center;
+
+}
+h1{
+    color: white;
+    font: 700 85px BebasNeue;
+    font-style: normal;
+    font-variant-ligatures: normal;
+    font-variant-caps: normal;
+    font-variant-numeric: normal;
+    font-variant-east-asian: normal;
+    font-weight: 700;
+    font-stretch: normal;
+    font-size: 85px;
+    line-height: normal;
+    font-family: BebasNeue;
 }

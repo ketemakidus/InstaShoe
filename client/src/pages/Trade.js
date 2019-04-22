@@ -4,8 +4,9 @@ import { Col, Row, Container } from "../components/Grid";
 import Jumbotron from "../components/Jumbotron";
 import FriendCard from "../components/shoeCard";
 import API from "../utils/API";
-import "./style.css"
 import shoes from "../shoes.json";
+import "./style.css";
+
 
 
 class Trade extends Component {

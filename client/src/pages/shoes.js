@@ -58,14 +58,11 @@ class shoes extends Component {
           <Col size="md-12">
             <Jumbotron>
                <h1>Whould you like to  do??</h1>
-              <Link to="/Trade/:id"> Trade</Link>
-              <Link  style={{ float: "right", marginBottom: 10 }} to="/donate">  Donate</Link>
-
-
             </Jumbotron>
                       </Col>
-          
         </Row>
+        <Link style={{ float: "left"}} to="/Trade/:id"> Trade</Link>
+        <Link  style={{ float: "right"}} to="/donate">  Donate</Link>
       </Container>
     );
   }

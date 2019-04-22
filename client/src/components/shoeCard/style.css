@@ -1,5 +1,6 @@
 .card {
   width: 325px;
+  border: 0px;
 }
 
 .card > .img-container {
