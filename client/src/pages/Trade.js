@@ -10,7 +10,6 @@ import "./style.css";
 
 
 class Trade extends Component {
-
   state = {
     shoes
   };

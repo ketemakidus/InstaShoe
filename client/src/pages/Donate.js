@@ -7,10 +7,23 @@ import Jumbotron from "../components/Jumbotron";
 
 class Donte extends Component {
   state = {
-    books: [],
-    title: "",
-    author: "",
-    synopsis: ""
+    shoes: [],
+    name: "",
+    image: "",
+    size: "",
+    Condition:""
+  };
+
+  componentDidMount() {
+    this.loadshoes();
+  }
+
+  loadshoes = () => {
+    API.getshoes()
+      .then(res =>
+        this.setState({ shoes: res.data, name: "", image: "", size: "",Condition:""})
+      )
+      .catch(err => console.log(err));
   };
 
 
@@ -23,11 +36,12 @@ handleInputChange = event => {
 
 handleFormSubmit = event => {
   event.preventDefault();
-  if (this.state.title && this.state.author) {
+  if (this.state.name && this.state.image) {
     API.saveshoes({
-      title: this.state.title,
-      author: this.state.author,
-      synopsis: this.state.synopsis
+      name: this.state.name,
+      image: this.state.image,
+      size: this.state.size,
+      Condition: this.state.size
     })
       .then(res => this.loadshoes())
       .catch(err => console.log(err));
@@ -46,23 +60,29 @@ render(){
       </Row>
       <form>
       <Input
-        value={this.state.title}
+        value={this.state.name}
         onChange={this.handleInputChange}
         name="title"
         placeholder="Name (required)"
       />
       <Input
-        value={this.state.author}
+        value={this.state.image}
         onChange={this.handleInputChange}
         name="author"
-        placeholder="Size (required)"
+        placeholder="image (required)"
       />
-      <TextArea
-        value={this.state.synopsis}
+      <Input
+        value={this.state.size}
         onChange={this.handleInputChange}
         name="synopsis"
-        placeholder="Condition (required)"
+        placeholder="size (required)"
       />
+      <TextArea
+      value={this.state.Condition}
+      onChange={this.handleInputChange}
+      name="synopsis"
+      placeholder="Condition (required)"
+    />
       <FormBtn
         onClick={this.handleFormSubmit}
       >

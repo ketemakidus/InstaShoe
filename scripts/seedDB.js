@@ -6,5 +6,5 @@ mongoose.connect(
   process.env.MONGODB_URI ||
   "mongodb://localhost/instashoe"
 );
-const bookSeed = [
+const shoeSeed = [
 ];
