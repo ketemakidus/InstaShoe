@@ -8,13 +8,12 @@ router.route("/")
 
 // Matches with "/api/shoes/:id"
 router
-  .route("/shoes")
+  .route("/:id")
   .get(shoesController.findById)
   .put(shoesController.update)
-  .delete(shoesController.remove);
 
-  router.route("/api/shoes")
-  .get(shoesController.findAll)
+  // router.route("/api/shoes")
+  // .post(shoesController.findAll)
 
 module.exports = router;
 

@@ -11,7 +11,7 @@ class Donte extends Component {
     name: "",
     image: "",
     size: "",
-    Condition:""
+    condition: ""
   };
 
   componentDidMount() {
@@ -19,85 +19,84 @@ class Donte extends Component {
   }
 
   loadshoes = () => {
-    API.getshoes()
+    API.getallshoes()  
       .then(res =>
-        this.setState({ shoes: res.data, name: "", image: "", size: "",Condition:""})
+        this.setState({
+          shoes: res.data,
+          // name: "",
+          // image: "",
+          // size: "",
+          // condition: ""
+        }, () => {
+          console.log(this.state.shoes)
+        })
       )
       .catch(err => console.log(err));
   };
 
-
-handleInputChange = event => {
-  const { name, value } = event.target;
-  this.setState({
-    [name]: value
-  });
-};
-
-handleFormSubmit = event => {
-  event.preventDefault();
-  if (this.state.name && this.state.image) {
+  handleInputChange = event => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value
+    });
+  };
+  
+  handleFormSubmit = event => {
+    event.preventDefault();
     API.saveshoes({
       name: this.state.name,
       image: this.state.image,
       size: this.state.size,
-      Condition: this.state.size
+      condition: this.state.condition
     })
       .then(res => this.loadshoes())
       .catch(err => console.log(err));
+  };
+
+  render() {
+    return (
+      <Container>
+        <Row>
+          <Col size="md-12">
+            <Jumbotron>
+              <h1>Fill the form to Donte shoes</h1>
+            </Jumbotron>
+          </Col>
+        </Row>
+        <form>
+          <Input
+            value={this.state.name}
+            onChange={this.handleInputChange}
+            name="name"
+            placeholder="name (required)"
+          />
+          <Input
+            value={this.state.image}
+            onChange={this.handleInputChange}
+            name="image"
+            placeholder="image (required)"
+          />
+          <Input
+            value={this.state.size}
+            onChange={this.handleInputChange}
+            name="size"
+            placeholder="size (required)"
+          />
+          <TextArea
+            value={this.state.condition}
+            onChange={this.handleInputChange}
+            name="condition"
+            placeholder="condition (required)"
+          />
+          <FormBtn onClick={this.handleFormSubmit}>Submit Shoes</FormBtn>
+        </form>
+        <Row>
+          <Col size="md-2">
+            <Link to="/">Back to Home Page</Link>
+          </Col>
+        </Row>
+      </Container>
+    );
   }
-};
-
-render(){
-  return (
-    <Container>
-      <Row>
-        <Col size="md-12">
-          <Jumbotron>
-            <h1>Fill the form to Donte shoes</h1>
-          </Jumbotron>
-        </Col>
-      </Row>
-      <form>
-      <Input
-        value={this.state.name}
-        onChange={this.handleInputChange}
-        name="title"
-        placeholder="Name (required)"
-      />
-      <Input
-        value={this.state.image}
-        onChange={this.handleInputChange}
-        name="author"
-        placeholder="image (required)"
-      />
-      <Input
-        value={this.state.size}
-        onChange={this.handleInputChange}
-        name="synopsis"
-        placeholder="size (required)"
-      />
-      <TextArea
-      value={this.state.Condition}
-      onChange={this.handleInputChange}
-      name="synopsis"
-      placeholder="Condition (required)"
-    />
-      <FormBtn
-        onClick={this.handleFormSubmit}
-      >
-        Submit Shoes
-      </FormBtn>
-    </form>
-      <Row>
-      <Col size="md-2">
-        <Link to="/">Back to Home Page</Link>
-      </Col>
-    </Row>
-    </Container>
-  );
 }
-
-};
-
 export default Donte;
