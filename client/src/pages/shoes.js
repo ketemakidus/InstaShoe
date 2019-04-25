@@ -10,7 +10,7 @@ class shoes extends Component {
         <Row>
           <Col size="md-12">
             <Jumbotron>
-              <h1>Whould you like to do??</h1>
+              <h1>What Whould you like to do??</h1>
             </Jumbotron>
           </Col>
         </Row>
