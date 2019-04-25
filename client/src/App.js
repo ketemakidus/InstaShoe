@@ -5,6 +5,7 @@ import Trade from "./pages/Trade";
 import Donate from "./pages/Donate";
 import Nav from "./components/Nav";
 
+
 function App() {
   return (
     <Router>

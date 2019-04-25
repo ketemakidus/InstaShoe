@@ -14,11 +14,17 @@ class shoes extends Component {
             </Jumbotron>
           </Col>
         </Row>
-        <Link style={{ float: "left" }} to="/Trade/:id">
+        <Link
+          style={{ background: "green", border: "groove", float: "left" }}
+          to="/Trade/:id"
+        >
           {" "}
           Trade
         </Link>
-        <Link style={{ float: "right" }} to="/donate">
+        <Link
+          style={{ background: "green", border: "groove", float: "right" }}
+          to="/donate"
+        >
           {" "}
           Donate
         </Link>

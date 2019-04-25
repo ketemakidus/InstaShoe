@@ -2,12 +2,10 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import Jumbotron from "../components/Jumbotron";
-import FriendCard from "../components/shoeCard";
+import shoeCard from "../components/shoeCard";
 import API from "../utils/API";
 import shoes from "../shoes.json";
 import "./style.css";
-
-
 
 class Trade extends Component {
   state = {
@@ -34,7 +32,7 @@ class Trade extends Component {
         </Row>
         <Row>
           {this.state.shoes.map(shoes => (
-            <FriendCard
+            <shoeCard
               id={shoes.id}
               key={shoes.id}
               name={shoes.name}
@@ -44,7 +42,7 @@ class Trade extends Component {
             />
             ))}
         </Row>
-       
+     
 
         <Row>
           <Col size="md-2">

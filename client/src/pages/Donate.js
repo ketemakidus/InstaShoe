@@ -4,6 +4,7 @@ import API from "../utils/API";
 import { Link } from "react-router-dom";
 import { Input, TextArea, FormBtn } from "../components/Form";
 import Jumbotron from "../components/Jumbotron";
+// import MDBContainer from "../components/modal"
 
 class Donte extends Component {
   state = {
@@ -90,6 +91,7 @@ class Donte extends Component {
           />
           <FormBtn onClick={this.handleFormSubmit}>Submit Shoes</FormBtn>
         </form>
+      
         <Row>
           <Col size="md-2">
             <Link to="/">Back to Home Page</Link>
