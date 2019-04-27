@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import shoes from "./pages/shoes";
 import Trade from "./pages/Trade";
 import Donate from "./pages/Donate";
+import Callback from "./pages/Callback"
 import Nav from "./components/Nav";
 
 
@@ -15,6 +16,7 @@ function App() {
           <Route exact path="/" component={shoes} />
           <Route exact path="/shoes" component={shoes} />
           <Route exact path="/Trade/:id" component={Trade} />
+          <Route exact path='/callback' component={Callback}/>
           <Route component="/donate" component={Donate} />
         </Switch>
       </div>

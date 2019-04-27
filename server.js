@@ -1,13 +1,30 @@
+// Define Dependencies
 const express = require("express");
-
 const mongoose = require("mongoose");
 const routes = require("./routes");
+const bodyParser = require('body-parser');
+const cors = require('cors');
+const helmet = require('helmet');
+const morgan = require('morgan');
+const jwt = require('express-jwt');
+const jwksRsa = require('jwks-rsa');
+
+// App Setup
 const app = express();
 const PORT = process.env.PORT || 3001;
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+// enhance your app security with Helmet
+app.use(helmet());
+// use bodyParser to parse application/json content-type
+app.use(bodyParser.json());
+// enable all CORS requests
+app.use(cors());
+// log HTTP requests
+app.use(morgan('combined'));
+
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
