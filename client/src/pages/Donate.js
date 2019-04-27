@@ -24,10 +24,7 @@ class Donate extends Component {
         this.setState(
           {
             shoes: res.data
-            // name: "",
-            // image: "",
-            // size: "",
-            // condition: ""
+          
           },
           () => {
             console.log(this.state.shoes);
