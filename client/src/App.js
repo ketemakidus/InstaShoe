@@ -3,7 +3,10 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import shoes from "./pages/shoes";
 import Trade from "./pages/Trade";
 import Donate from "./pages/Donate";
+import Callback from "./pages/Callback";
 import Nav from "./components/Nav";
+import SecuredRoute from "./components/SecuredRoute"
+
 
 
 function App() {
@@ -15,7 +18,8 @@ function App() {
           <Route exact path="/" component={shoes} />
           <Route exact path="/shoes" component={shoes} />
           <Route exact path="/Trade/:id" component={Trade} />
-          <Route component="/donate" component={Donate} />
+          <SecuredRoute exact path="/donate" component={Donate} />
+          <Route exact path='/callback' component={Callback}/>
         </Switch>
       </div>
     </Router>
