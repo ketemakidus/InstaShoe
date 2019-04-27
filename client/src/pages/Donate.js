@@ -4,7 +4,7 @@ import API from "../utils/API";
 import { Link } from "react-router-dom";
 import { Input, TextArea, FormBtn } from "../components/Form";
 import "./style.css";
-
+// import MyModal from '../components/modal'
 class Donate extends Component {
   state = {
     shoes: [],
@@ -84,7 +84,6 @@ class Donate extends Component {
           />
           <FormBtn onClick={this.handleFormSubmit}>Submit</FormBtn>
         </form>
-
         <Row>
           <Col size="md-2">
             <Link className="Home" to="/">
