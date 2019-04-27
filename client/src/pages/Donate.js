@@ -3,10 +3,9 @@ import { Col, Row, Container } from "../components/Grid";
 import API from "../utils/API";
 import { Link } from "react-router-dom";
 import { Input, TextArea, FormBtn } from "../components/Form";
-import Jumbotron from "../components/Jumbotron";
-// import MDBContainer from "../components/modal"
+import "./style.css";
 
-class Donte extends Component {
+class Donate extends Component {
   state = {
     shoes: [],
     name: "",
@@ -20,17 +19,20 @@ class Donte extends Component {
   }
 
   loadshoes = () => {
-    API.getallshoes()  
+    API.getallshoes()
       .then(res =>
-        this.setState({
-          shoes: res.data,
-          // name: "",
-          // image: "",
-          // size: "",
-          // condition: ""
-        }, () => {
-          console.log(this.state.shoes)
-        })
+        this.setState(
+          {
+            shoes: res.data
+            // name: "",
+            // image: "",
+            // size: "",
+            // condition: ""
+          },
+          () => {
+            console.log(this.state.shoes);
+          }
+        )
       )
       .catch(err => console.log(err));
   };
@@ -41,7 +43,7 @@ class Donte extends Component {
       [name]: value
     });
   };
-  
+
   handleFormSubmit = event => {
     event.preventDefault();
     API.saveshoes({
@@ -57,48 +59,44 @@ class Donte extends Component {
   render() {
     return (
       <Container>
-        <Row>
-          <Col size="md-12">
-            <Jumbotron>
-              <h1>Fill the form to Donte shoes</h1>
-            </Jumbotron>
-          </Col>
-        </Row>
+        <h2>Fill Out This Form To Donate Your Shoe</h2>
         <form>
           <Input
             value={this.state.name}
             onChange={this.handleInputChange}
             name="name"
-            placeholder="name (required)"
+            placeholder="Name (required)"
           />
           <Input
             value={this.state.image}
             onChange={this.handleInputChange}
             name="image"
-            placeholder="image (required)"
+            placeholder="Image (required)"
           />
           <Input
             value={this.state.size}
             onChange={this.handleInputChange}
             name="size"
-            placeholder="size (required)"
+            placeholder="Size (required)"
           />
           <TextArea
             value={this.state.condition}
             onChange={this.handleInputChange}
             name="condition"
-            placeholder="condition (required)"
+            placeholder="Condition (required)"
           />
-          <FormBtn onClick={this.handleFormSubmit}>Submit Shoes</FormBtn>
+          <FormBtn onClick={this.handleFormSubmit}>Submit</FormBtn>
         </form>
-      
+
         <Row>
           <Col size="md-2">
-            <Link to="/">Back to Home Page</Link>
+            <Link className="Home" to="/">
+              Home
+            </Link>
           </Col>
         </Row>
       </Container>
     );
   }
 }
-export default Donte;
+export default Donate;

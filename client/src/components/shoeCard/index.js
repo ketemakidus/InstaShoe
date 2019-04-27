@@ -20,7 +20,6 @@ function shoeCard(props) {
           </li>
         </ul>
       </div>
-     
     </div>
   );
 }

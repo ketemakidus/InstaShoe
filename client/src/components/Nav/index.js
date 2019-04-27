@@ -1,20 +1,11 @@
 import React from "react";
-import "./style.css"
+import "./style.css";
 
-const styles = {
-  nav: {
-    margin: 20,
-    background: "#4aaaa"
-  },
- 
-};
 function Nav() {
   return (
-
-    <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-    
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <a className="navbar-brand" href="/">
-INSTASHOE
+        INSTASHOE
       </a>
     </nav>
   );
