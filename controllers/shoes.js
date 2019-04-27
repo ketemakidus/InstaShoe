@@ -1,4 +1,5 @@
 const db = require("../models");
+const jwt = require('express-jwt');
 
 // Defining methods for the shoesController
 module.exports = {
