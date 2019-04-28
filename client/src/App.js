@@ -18,12 +18,7 @@ function App() {
           <Route exact path="/" component={shoes} />
           <Route exact path="/shoes" component={shoes} />
           <Route exact path="/Trade/:id" component={Trade} />
-<<<<<<< HEAD
           <Route exact path="/donate" component={Donate} />
-=======
-          <SecuredRoute exact path="/donate" component={Donate} />
-          <Route exact path='/callback' component={Callback}/>
->>>>>>> origin/master
         </Switch>
       </div>
     </Router>
