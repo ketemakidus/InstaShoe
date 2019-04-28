@@ -4,7 +4,7 @@ import API from "../utils/API";
 import { Link } from "react-router-dom";
 import { Input, TextArea, FormBtn } from "../components/Form";
 import "./style.css";
-// import MyModal from '../components/modal'
+import FriendCard from "../components/shoeCard";
 class Donate extends Component {
   state = {
     shoes: [],
@@ -24,7 +24,6 @@ class Donate extends Component {
         this.setState(
           {
             shoes: res.data
-          
           },
           () => {
             console.log(this.state.shoes);
@@ -84,6 +83,17 @@ class Donate extends Component {
           />
           <FormBtn onClick={this.handleFormSubmit}>Submit</FormBtn>
         </form>
+
+        {this.state.shoes.map(shoes => (
+          <FriendCard
+            id={shoes.id}
+            key={shoes.id}
+            name={shoes.name}
+            image={shoes.image}
+            Size={shoes.Size}
+            Condition={shoes.Condition}
+          />
+        ))}
         <Row>
           <Col size="md-2">
             <Link className="Home" to="/">
