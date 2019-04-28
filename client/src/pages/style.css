@@ -5,6 +5,12 @@ h1 {
   font-weight: 700;
   margin-bottom: 60px;
   margin-top: 25px;
+  font: 700 85px BebasNeue;
+  letter-spacing: 2px;
+  margin: auto;
+  width: 98%;
+  font-family: 'Indie Flower', cursive;
+
 }
 
 .Trade,
@@ -20,11 +26,13 @@ h1 {
 
 h2 {
   text-align: center;
-  color: black;
+  color:white;
   font-size: 65px;
   font-weight: 700;
   margin-bottom: 20px;
   margin-top: 25px;
+  font-family: 'Indie Flower', cursive;
+
 }
 
 .Home {
