@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { Input, TextArea, FormBtn } from "../components/Form";
 import "./style.css";
 import FriendCard from "../components/shoeCard";
+
 class Donate extends Component {
   state = {
     shoes: [],
@@ -23,7 +24,7 @@ class Donate extends Component {
       .then(res =>
         this.setState(
           {
-            shoes: res.data
+            shoes: res.data, name:"",image:"",size:"",condition:""
           },
           () => {
             console.log(this.state.shoes);
@@ -90,7 +91,7 @@ class Donate extends Component {
             key={shoes.id}
             name={shoes.name}
             image={shoes.image}
-            Size={shoes.Size}
+            size={shoes.size}
             Condition={shoes.Condition}
           />
         ))}
