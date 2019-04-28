@@ -24,7 +24,11 @@ class Donate extends Component {
       .then(res =>
         this.setState(
           {
-            shoes: res.data, name:"",image:"",size:"",condition:""
+            shoes: res.data,
+            name: "",
+            image: "",
+            size: "",
+            condition: ""
           },
           () => {
             console.log(this.state.shoes);
@@ -56,45 +60,52 @@ class Donate extends Component {
   render() {
     return (
       <Container>
-        <h2>Fill Out This Form To Donate Your Shoe</h2>
-        <form>
-          <Input
-            value={this.state.name}
-            onChange={this.handleInputChange}
-            name="name"
-            placeholder="Name (required)"
-          />
-          <Input
-            value={this.state.image}
-            onChange={this.handleInputChange}
-            name="image"
-            placeholder="Image (required)"
-          />
-          <Input
-            value={this.state.size}
-            onChange={this.handleInputChange}
-            name="size"
-            placeholder="Size (required)"
-          />
-          <TextArea
-            value={this.state.condition}
-            onChange={this.handleInputChange}
-            name="condition"
-            placeholder="Condition (required)"
-          />
-          <FormBtn onClick={this.handleFormSubmit}>Submit</FormBtn>
-        </form>
-
-        {this.state.shoes.map(shoes => (
-          <FriendCard
-            id={shoes.id}
-            key={shoes.id}
-            name={shoes.name}
-            image={shoes.image}
-            size={shoes.size}
-            Condition={shoes.Condition}
-          />
-        ))}
+        <Row>
+          <h2>Fill Out This Form 
+          To Donate Your Shoe</h2>
+        </Row>
+        <Row>
+          <form>
+            <Input
+              value={this.state.name}
+              onChange={this.handleInputChange}
+              name="name"
+              placeholder="Name (required)"
+            />
+            <Input
+              value={this.state.image}
+              onChange={this.handleInputChange}
+              name="image"
+              placeholder="Image (required)"
+            />
+            <Input
+              value={this.state.size}
+              onChange={this.handleInputChange}
+              name="size"
+              placeholder="Size (required)"
+            />
+            <TextArea
+              value={this.state.condition}
+              onChange={this.handleInputChange}
+              name="condition"
+              placeholder="Condition (required)"
+            />
+            <FormBtn onClick={this.handleFormSubmit}>Submit</FormBtn>
+          </form>
+        </Row>
+        <span />
+        <Row>
+          {this.state.shoes.map(shoes => (
+            <FriendCard
+              id={shoes.id}
+              key={shoes.id}
+              name={shoes.name}
+              image={shoes.image}
+              size={shoes.size}
+              condition={shoes.condition}
+            />
+          ))}
+        </Row>
         <Row>
           <Col size="md-2">
             <Link className="Home" to="/">
