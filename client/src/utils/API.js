@@ -1,4 +1,5 @@
 import axios from "axios";
+import auth0Client from '../utils/Auth';
 
 export default {
   // Gets all shoes
@@ -11,6 +12,6 @@ export default {
   },
   // Saves a shoes to the database
   saveshoes: function(shoesData) {
-    return axios.post("/api/shoes", shoesData);
+    return axios.post("/api/shoes", shoesData, {headers: { 'Authorization': `Bearer ${auth0Client.getIdToken()}` }});
   }
 };

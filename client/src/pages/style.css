@@ -26,13 +26,25 @@ h1 {
 
 h2 {
   text-align: center;
+<<<<<<< HEAD
   color:white;
+=======
+  color: white;
+>>>>>>> origin/master
   font-size: 65px;
   font-weight: 700;
   margin-bottom: 20px;
   margin-top: 25px;
+<<<<<<< HEAD
   font-family: 'Indie Flower', cursive;
 
+=======
+  font: 700 85px BebasNeue;
+  letter-spacing: 2px;
+  margin: auto;
+  width: 98%;
+  font-family: 'Indie Flower', cursive;
+>>>>>>> origin/master
 }
 
 .Home {
