@@ -18,7 +18,8 @@ function App() {
           <Route exact path="/" component={shoes} />
           <Route exact path="/shoes" component={shoes} />
           <Route exact path="/Trade/:id" component={Trade} />
-          <Route exact path="/donate" component={Donate} />
+          <SecuredRoute exact path="/donate" component={Donate} />
+          <Route exact path='/callback' component={Callback}/>
         </Switch>
       </div>
     </Router>
