@@ -1,0 +1,10 @@
+.button
+{
+    color: azure;
+}
+.MuiButton-outlined-9 {
+    border: 1px solid rgba(0, 0, 0, 0.23);
+    padding: 5px 16px;
+    color: azure;
+
+}

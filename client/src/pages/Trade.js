@@ -6,6 +6,7 @@ import API from "../utils/API";
 import shoes from "../shoes.json";
 import "./style.css";
 
+
 class Trade extends Component {
   state = {
     shoes

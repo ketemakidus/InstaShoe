@@ -6,6 +6,7 @@ import { Input, TextArea, FormBtn } from "../components/Form";
 import "./style.css";
 import FriendCard from "../components/shoeCard";
 
+
 class Donate extends Component {
   state = {
     shoes: [],
