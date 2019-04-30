@@ -3,6 +3,9 @@ import Jumbotron from "../components/Jumbotron";
 import { Col, Row, Container } from "../components/Grid";
 import { Link } from "react-router-dom";
 import "./style.css";
+import CustomizedDialogDemo from "../components/modal";
+
+
 
 class shoes extends Component {
   render() {
@@ -11,6 +14,8 @@ class shoes extends Component {
         <Row>
           <Col size="md-12">
             <Jumbotron>
+            <CustomizedDialogDemo />
+
               <h1>What Would you like to do?</h1>
               <Link className="Trade" to="/Trade/:id">
                 {" "}

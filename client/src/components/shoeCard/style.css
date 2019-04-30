@@ -7,20 +7,24 @@
   position: relative;
   box-shadow: 2px 2px 5px rgb(56, 56, 56);
   transition: all 0.2s ease-in-out;
+  
 }
 
 .card > .img-container {
   overflow: hidden;
   background: #ffffff;
+  
 }
 
 .card > .img-container > img {
   width: 100%;
+  
 }
 
 .card > .content {
   font-size: 15px;
   margin-right: 5px;
+  
 }
 
 .card > .content > ul {

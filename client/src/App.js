@@ -9,6 +9,7 @@ import SecuredRoute from "./components/SecuredRoute"
 
 
 
+
 function App() {
   return (
     <Router>
@@ -20,9 +21,11 @@ function App() {
           <Route exact path="/Trade/:id" component={Trade} />
           <SecuredRoute exact path="/donate" component={Donate} />
           <Route exact path='/callback' component={Callback}/>
+
         </Switch>
       </div>
     </Router>
   );
 }
+
 export default App;
