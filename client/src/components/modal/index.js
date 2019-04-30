@@ -78,7 +78,7 @@ class CustomizedDialogDemo extends React.Component {
           open={this.state.open}
         >
           <DialogTitle id="customized-dialog-title" onClose={this.handleClose}>
-            Modal title
+            InstaShoe
           </DialogTitle>
           <DialogContent>
             <Typography gutterBottom>
@@ -93,7 +93,7 @@ class CustomizedDialogDemo extends React.Component {
           </DialogContent>
           <DialogActions>
             <Button onClick={this.handleClose} color="primary">
-              Save changes
+Close
             </Button>
           </DialogActions>
         </Dialog>
