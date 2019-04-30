@@ -82,11 +82,10 @@ class CustomizedDialogDemo extends React.Component {
           </DialogTitle>
           <DialogContent>
             <Typography gutterBottom>
-            App made to help people trade their used shoes or donate them!
+            Application  made to help people trade their used shoes or donate them!
             </Typography>
             <Typography gutterBottom>
-            App made to help people trade their used shoes or donate them!
-                        </Typography>
+            If you live in the united states and you have a shoe for donation.Donate as many items as you’d like.you don't have to find a store just fill in our donation form and we will pick it up from your united states address.                        </Typography>
             <Typography gutterBottom>
             App made to help people trade their used shoes or donate them!
             </Typography>
