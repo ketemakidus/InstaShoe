@@ -6,7 +6,6 @@ import API from "../utils/API";
 import shoes from "../shoes.json";
 import "./style.css";
 
-
 class Trade extends Component {
   state = {
     shoes
@@ -20,7 +19,7 @@ class Trade extends Component {
 
   render() {
     return (
-      <Container fluid>
+      <Container className="shoecontainer">
         <Row>
           {this.state.shoes.map(shoes => (
             <FriendCard

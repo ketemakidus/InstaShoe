@@ -9,8 +9,7 @@ h1 {
   letter-spacing: 2px;
   margin: auto;
   width: 98%;
-  font-family: 'Indie Flower', cursive;
-
+  font-family: "Indie Flower", cursive;
 }
 
 .Trade,
@@ -26,13 +25,12 @@ h1 {
 
 h2 {
   text-align: center;
-  color:white;
+  color: white;
   font-size: 65px;
   font-weight: 700;
   margin-bottom: 20px;
   margin-top: 25px;
-  font-family: 'Indie Flower', cursive;
-
+  font-family: "Indie Flower", cursive;
 }
 
 .Home {
@@ -44,3 +42,6 @@ h2 {
   color: black;
 }
 
+.shoecontainer {
+  margin-left: 100px;
+}
