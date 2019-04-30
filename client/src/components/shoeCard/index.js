@@ -13,10 +13,10 @@ function shoeCard(props) {
             <strong>Name:</strong> {props.name}
           </li>
           <li>
-            <strong>Size:</strong> {props.Size}
+            <strong>Size:</strong> {props.size}
           </li>
           <li>
-            <strong>Condition:</strong> {props.Condition}
+            <strong>Condition:</strong> {props.condition}
           </li>
         </ul>
       </div>

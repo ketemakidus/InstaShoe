@@ -28,8 +28,8 @@ class Trade extends Component {
               key={shoes.id}
               name={shoes.name}
               image={shoes.image}
-              Size={shoes.Size}
-              Condition={shoes.Condition}
+              size={shoes.Size}
+              condition={shoes.Condition}
             />
           ))}
         </Row>
