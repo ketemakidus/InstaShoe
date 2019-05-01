@@ -20,8 +20,6 @@ export default class FormDialog extends React.Component {
     this.setState({ open: false });
   };
 
-  
-
   render() {
     return (
       <div>
@@ -40,8 +38,7 @@ export default class FormDialog extends React.Component {
           <DialogTitle id="form-dialog-title">Trade a shoe</DialogTitle>
           <DialogContent>
             <DialogContentText>
-              To Trade , please enter Name,image,size and condition here. We
-              will send updates occasionally.
+              To Trade, please enter Name, Image, Size, and Condition here.
             </DialogContentText>
             <TextField
               autoFocus
@@ -55,7 +52,7 @@ export default class FormDialog extends React.Component {
               autoFocus
               margin="dense"
               id="name"
-              label="image"
+              label="Image"
               type="email"
               fullWidth
             />
@@ -64,7 +61,7 @@ export default class FormDialog extends React.Component {
               margin="dense"
               id="name"
               margin="dense"
-              label="size"
+              label="Size"
               type="email"
               fullWidth
             />
@@ -72,7 +69,7 @@ export default class FormDialog extends React.Component {
               autoFocus
               margin="dense"
               id="name"
-              label="condition"
+              label="Condition"
               type="email"
               fullWidth
             />
