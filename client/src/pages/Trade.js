@@ -5,21 +5,18 @@ import FriendCard from "../components/shoeCard";
 import API from "../utils/API";
 import shoes from "../shoes.json";
 import "./style.css";
+import FormDialog from "../components/modalform"
 
 class Trade extends Component {
   state = {
     shoes
   };
 
-  componentDidMount() {
-    API.getshoes(this.props.match.params.id)
-      .then(res => this.setState({ shoes: res.data }))
-      .catch(err => console.log(err));
-  }
 
   render() {
     return (
-      <Container className="shoecontainer">
+      <Container fluid>
+       <FormDialog />
         <Row>
           {this.state.shoes.map(shoes => (
             <FriendCard
