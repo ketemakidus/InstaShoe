@@ -1,34 +1,38 @@
-import React from 'react';
-import { withStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
-import Dialog from '@material-ui/core/Dialog';
-import MuiDialogTitle from '@material-ui/core/DialogTitle';
-import MuiDialogContent from '@material-ui/core/DialogContent';
-import MuiDialogActions from '@material-ui/core/DialogActions';
-import IconButton from '@material-ui/core/IconButton';
-import CloseIcon from '@material-ui/icons/Close';
-import Typography from '@material-ui/core/Typography';
-import "./style.css"
+import React from "react";
+import { withStyles } from "@material-ui/core/styles";
+import Button from "@material-ui/core/Button";
+import Dialog from "@material-ui/core/Dialog";
+import MuiDialogTitle from "@material-ui/core/DialogTitle";
+import MuiDialogContent from "@material-ui/core/DialogContent";
+import MuiDialogActions from "@material-ui/core/DialogActions";
+import IconButton from "@material-ui/core/IconButton";
+import CloseIcon from "@material-ui/icons/Close";
+import Typography from "@material-ui/core/Typography";
+import "./style.css";
 
 const DialogTitle = withStyles(theme => ({
   root: {
     borderBottom: `1px solid ${theme.palette.divider}`,
     margin: 0,
-    padding: theme.spacing.unit * 2,
+    padding: theme.spacing.unit * 2
   },
   closeButton: {
-    position: 'absolute',
+    position: "absolute",
     right: theme.spacing.unit,
     top: theme.spacing.unit,
-    color: theme.palette.grey[500],
-  },
+    color: theme.palette.grey[500]
+  }
 }))(props => {
   const { children, classes, onClose } = props;
   return (
     <MuiDialogTitle disableTypography className={classes.root}>
       <Typography variant="h6">{children}</Typography>
       {onClose ? (
-        <IconButton aria-label="Close" className={classes.closeButton} onClick={onClose}>
+        <IconButton
+          aria-label="Close"
+          className={classes.closeButton}
+          onClick={onClose}
+        >
           <CloseIcon />
         </IconButton>
       ) : null}
@@ -39,26 +43,26 @@ const DialogTitle = withStyles(theme => ({
 const DialogContent = withStyles(theme => ({
   root: {
     margin: 0,
-    padding: theme.spacing.unit * 2,
-  },
+    padding: theme.spacing.unit * 2
+  }
 }))(MuiDialogContent);
 
 const DialogActions = withStyles(theme => ({
   root: {
     borderTop: `20px solid ${theme.palette.divider}`,
     margin: 0,
-    padding: theme.spacing.unit,
-  },
+    padding: theme.spacing.unit
+  }
 }))(MuiDialogActions);
 
 class CustomizedDialogDemo extends React.Component {
   state = {
-    open: false,
+    open: false
   };
 
   handleClickOpen = () => {
     this.setState({
-      open: true,
+      open: true
     });
   };
 
@@ -68,8 +72,8 @@ class CustomizedDialogDemo extends React.Component {
 
   render() {
     return (
-      <div>
-        <Button className="button" variant="text" color="primary"  onClick={this.handleClickOpen}>
+      <div className="infodiv">
+        <Button className="info" color="primary" onClick={this.handleClickOpen}>
           LEARN ABOUT INSTASHOE
         </Button>
         <Dialog
@@ -82,17 +86,22 @@ class CustomizedDialogDemo extends React.Component {
           </DialogTitle>
           <DialogContent>
             <Typography gutterBottom>
-            Application  made to help people trade their used shoes or donate them!
+              Application made to help people trade their used shoes or donate
+              them!
             </Typography>
             <Typography gutterBottom>
-            If you live in the united states and you have a shoe for donation.Donate as many items as you’d like.you don't have to find a store just fill in our donation form and we will pick it up from your united states address.                        </Typography>
+              If you live in the United States and you have a used shoe, you can
+              browse other used shoes to trade or donate them. Donate as many
+              items as you’d like. You don't have to find a store just fill in
+              our donation form and we will pick it up from you.{" "}
+            </Typography>
             <Typography gutterBottom>
-            App made to help people trade their used shoes or donate them!
+              App made to help people trade their used shoes or donate them!
             </Typography>
           </DialogContent>
           <DialogActions>
             <Button onClick={this.handleClose} color="primary">
-Close
+              Close
             </Button>
           </DialogActions>
         </Dialog>

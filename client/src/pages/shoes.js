@@ -5,8 +5,6 @@ import { Link } from "react-router-dom";
 import "./style.css";
 import CustomizedDialogDemo from "../components/modal";
 
-
-
 class shoes extends Component {
   render() {
     return (
@@ -14,9 +12,9 @@ class shoes extends Component {
         <Row>
           <Col size="md-12">
             <Jumbotron>
-            <CustomizedDialogDemo />
+              <CustomizedDialogDemo />
 
-              <h1>What Would you like to do?</h1>
+              <h1>What would you like to do?</h1>
               <Link className="Trade" to="/Trade/:id">
                 {" "}
                 Trade
