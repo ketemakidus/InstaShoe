@@ -1,6 +1,6 @@
 h1 {
   text-align: center;
-  color: white;
+  color: black;
   font-size: 85px;
   font-weight: 700;
   margin-bottom: 60px;
@@ -14,7 +14,7 @@ h1 {
 
 .Trade,
 .Donate {
-  color: white;
+  color: black;
   font-size: 35px;
 }
 
