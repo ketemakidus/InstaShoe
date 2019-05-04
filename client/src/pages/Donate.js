@@ -6,7 +6,6 @@ import { Input, TextArea, FormBtn } from "../components/Form";
 import "./style.css";
 import FriendCard from "../components/shoeCard";
 
-
 class Donate extends Component {
   state = {
     shoes: [],
@@ -62,8 +61,7 @@ class Donate extends Component {
     return (
       <Container>
         <Row>
-          <h2>Fill Out This Form 
-          To Donate Your Shoe</h2>
+          <h2>Fill Out This Form To Donate Your Shoe</h2>
         </Row>
         <Row>
           <form>
@@ -107,13 +105,13 @@ class Donate extends Component {
             />
           ))}
         </Row>
-        <Row>
+        {/* <Row>
           <Col size="md-2">
             <Link className="Home" to="/">
               Home
             </Link>
           </Col>
-        </Row>
+        </Row> */}
       </Container>
     );
   }
