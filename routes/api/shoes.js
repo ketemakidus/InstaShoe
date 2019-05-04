@@ -23,7 +23,7 @@ router.route("/")
   .post(checkJwt, shoesController.create);
 
 // Matches with "/api/shoes/:id"
-router.route("/:id")
+router.route("/")
   .get(shoesController.findById)
   .put(shoesController.update)
 
