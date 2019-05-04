@@ -3,7 +3,7 @@ import auth0 from 'auth0-js';
 class Auth {
   constructor() {
     let redirectUri = 'http://localhost:3000/callback';
-    if (process.env.NODE_ENV === 'production') {
+    if (process.env.MONGODB_URI) {
       redirectUri = 'https://peaceful-shelf-92187.herokuapp.com/callback';
     }
     this.auth0 = new auth0.WebAuth({
