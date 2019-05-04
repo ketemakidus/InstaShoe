@@ -8,6 +8,6 @@ const shoesSchema = new Schema({
   condition: { type: String, required: true }
 });
 
-const shoes = mongoose.model("shoes", shoesSchema);
+const Trade = mongoose.model("Trade", shoesSchema);
 
-module.exports = shoes;
+module.exports = Trade;

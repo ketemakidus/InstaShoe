@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import FriendCard from "../components/shoeCard";
-import API from "../utils/API";
 import shoes from "../shoes.json";
 import "./style.css";
 import FormDialog from "../components/modalform"
