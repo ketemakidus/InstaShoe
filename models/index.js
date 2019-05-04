@@ -1,3 +1,4 @@
 module.exports = {
-  shoes: require("./shoes")
+  Donate: require("./Donate"),
+  Trade:require("./Trade")
 };

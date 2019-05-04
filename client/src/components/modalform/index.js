@@ -22,7 +22,7 @@ export default class FormDialog extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="trade-form">
         <Button
           variant="outlined"
           color="primary"
