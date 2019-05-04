@@ -15,7 +15,7 @@ class shoes extends Component {
               <CustomizedDialogDemo />
 
               <h1>What would you like to do?</h1>
-              <Link className="Trade" to="/Trade">
+              <Link className="Trade" to="/trade">
                 {" "}
                 Trade
               </Link>
