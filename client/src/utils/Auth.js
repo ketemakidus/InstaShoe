@@ -2,11 +2,15 @@ import auth0 from 'auth0-js';
 
 class Auth {
   constructor() {
+    let redirectUri = 'http://localhost:3000/callback';
+    if (process.env.NODE_ENV === 'production') {
+      redirectUri = 'https://peaceful-shelf-92187.herokuapp.com/callback';
+    }
     this.auth0 = new auth0.WebAuth({
       domain: 'stimpacc.auth0.com',
       audience: 'https://stimpacc.auth0.com/userinfo',
       clientID: 'ZLCb2Ey0aLiRpsEvdMKs08bAgaiOrCGo',
-      redirectUri: 'http://localhost:3000/callback',
+      redirectUri: redirectUri,
       responseType: 'id_token',
       scope: 'openid profile'
     });
