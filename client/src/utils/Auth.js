@@ -2,9 +2,10 @@ import auth0 from 'auth0-js';
 
 class Auth {
   constructor() {
-    let redirectUri = 'http://localhost:3000/callback';
-    if (process.env.MONGODB_URI) {
-      redirectUri = 'https://peaceful-shelf-92187.herokuapp.com/callback';
+    let redirectUri = 'https://peaceful-shelf-92187.herokuapp.com/callback';
+    console.log(process.env.NODE_ENV);
+    if (process.env.NODE_ENV === "development") {
+      redirectUri = 'http://localhost:3000/callback';
     }
     this.auth0 = new auth0.WebAuth({
       domain: 'stimpacc.auth0.com',
