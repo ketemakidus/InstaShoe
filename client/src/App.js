@@ -5,10 +5,7 @@ import Trade from "./pages/Trade";
 import Donate from "./pages/Donate";
 import Callback from "./pages/Callback";
 import Nav from "./components/Nav";
-import SecuredRoute from "./components/SecuredRoute"
-
-
-
+import SecuredRoute from "./components/SecuredRoute";
 
 function App() {
   return (
@@ -18,10 +15,9 @@ function App() {
         <Switch>
           <Route exact path="/" component={shoes} />
           <Route exact path="/shoes" component={shoes} />
-          <Route exact path="/Trade/:id" component={Trade} />
+          <Route exact path="/Trade" component={Trade} />
           <SecuredRoute exact path="/donate" component={Donate} />
-          <Route exact path='/callback' component={Callback}/>
-
+          <Route exact path="/callback" component={Callback} />
         </Switch>
       </div>
     </Router>
