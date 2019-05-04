@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const shoesController = require("../../controllers/shoes");
-const jwt = require('express-jwt');
-const jwksRsa = require('jwks-rsa');
+const jwt = require("express-jwt");
+const jwksRsa = require("jwks-rsa");
 
 const checkJwt = jwt({
   secret: jwksRsa.expressJwtSecret({
@@ -12,24 +12,24 @@ const checkJwt = jwt({
   }),
 
   // Validate the audience and the issuer.
-  audience: 'ZLCb2Ey0aLiRpsEvdMKs08bAgaiOrCGo',
+  audience: "ZLCb2Ey0aLiRpsEvdMKs08bAgaiOrCGo",
   issuer: `https://stimpacc.auth0.com/`,
-  algorithms: ['RS256']
+  algorithms: ["RS256"]
 });
 
 // Matches with "/api/shoes"
-router.route("/")
+router
+  .route("/")
   .get(shoesController.findAll)
   .post(checkJwt, shoesController.create);
 
 // Matches with "/api/shoes/:id"
-router.route("/:id")
+router
+  .route("/")
   .get(shoesController.findById)
-  .put(shoesController.update)
+  .put(shoesController.update);
 
-  // router.route("/api/shoes")
-  // .post(shoesController.findAll)
+// router.route("/api/shoes")
+// .post(shoesController.findAll)
 
 module.exports = router;
-
-
