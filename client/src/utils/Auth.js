@@ -2,11 +2,14 @@ import auth0 from 'auth0-js';
 
 class Auth {
   constructor() {
+
     let redirectUri = 'https://peaceful-shelf-92187.herokuapp.com/callback';
-    console.log(process.env.NODE_ENV);
     if (process.env.NODE_ENV === "development") {
       redirectUri = 'http://localhost:3000/callback';
     }
+    console.log(process.env.NODE_ENV);
+    console.log(redirectUri);
+
     this.auth0 = new auth0.WebAuth({
       domain: 'stimpacc.auth0.com',
       audience: 'https://stimpacc.auth0.com/userinfo',
@@ -59,9 +62,16 @@ class Auth {
     this.expiresAt = authResult.idTokenPayload.exp * 1000;
   }
 
+  
   signOut() {
+    let returnTo = 'https://peaceful-shelf-92187.herokuapp.com';
+    if (process.env.NODE_ENV === "development") {
+      returnTo = 'http://localhost:3000';
+    }
+    console.log(process.env.NODE_ENV + ' - signout');
+    console.log(returnTo);
     this.auth0.logout({
-      returnTo: 'http://localhost:3000',
+      returnTo: returnTo,
       clientID: 'ZLCb2Ey0aLiRpsEvdMKs08bAgaiOrCGo',
     });
   }
