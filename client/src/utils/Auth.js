@@ -1,20 +1,13 @@
 import auth0 from 'auth0-js';
+var config = require("./config");
 
 class Auth {
   constructor() {
-
-    let redirectUri = 'https://peaceful-shelf-92187.herokuapp.com/callback';
-    if (process.env.NODE_ENV === "development") {
-      redirectUri = 'http://localhost:3000/callback';
-    }
-    console.log(process.env.NODE_ENV);
-    console.log(redirectUri);
-
     this.auth0 = new auth0.WebAuth({
-      domain: 'stimpacc.auth0.com',
-      audience: 'https://stimpacc.auth0.com/userinfo',
-      clientID: 'ZLCb2Ey0aLiRpsEvdMKs08bAgaiOrCGo',
-      redirectUri: redirectUri,
+      domain: config.auth0.domain,
+      audience: config.auth0.audience,
+      clientID: config.auth0.clientID,
+      redirectUri: config.auth0.redirectUri,
       responseType: 'id_token',
       scope: 'openid profile'
     });
@@ -64,15 +57,10 @@ class Auth {
 
   
   signOut() {
-    let returnTo = 'https://peaceful-shelf-92187.herokuapp.com';
-    if (process.env.NODE_ENV === "development") {
-      returnTo = 'http://localhost:3000';
-    }
-    console.log(process.env.NODE_ENV + ' - signout');
-    console.log(returnTo);
+    let returnTo = config.auth0.redirectUri.replace('/callback', '');
     this.auth0.logout({
       returnTo: returnTo,
-      clientID: 'ZLCb2Ey0aLiRpsEvdMKs08bAgaiOrCGo',
+      clientID: config.auth0.clientID,
     });
   }
 
