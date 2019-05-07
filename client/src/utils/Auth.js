@@ -3,7 +3,6 @@ var config = require("./config");
 
 class Auth {
   constructor() {
-    console.log(config.auth0);
     this.auth0 = new auth0.WebAuth({
       domain: config.auth0.domain,
       audience: config.auth0.audience,
