@@ -4,7 +4,7 @@ import API from "../utils/API";
 import { Link } from "react-router-dom";
 import { Input, TextArea, FormBtn } from "../components/Form";
 import "./style.css";
-import FriendCard from "../components/shoeCard";
+import ShoeCard from "../components/shoeCard";
 
 class Donate extends Component {
   state = {
@@ -95,9 +95,9 @@ class Donate extends Component {
         <span />
         <Row>
           {this.state.shoes.map(shoes => (
-            <FriendCard
-              id={shoes.id}
-              key={shoes.id}
+            <ShoeCard
+              id={shoes._id}
+              key={shoes._id}
               name={shoes.name}
               image={shoes.image}
               size={shoes.size}
